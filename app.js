@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
 const PORT = 8000;
+const voiture = require('./routes/voiture');
+
+app.use('/voiture',voiture);
 
 
 app.listen(PORT,()=>{
