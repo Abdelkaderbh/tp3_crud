@@ -3,6 +3,7 @@ const app = express();
 const PORT = 8000;
 const voiture = require('./routes/voiture');
 
+app.use(express.json());
 app.use('/voiture',voiture);
 
 
