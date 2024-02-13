@@ -41,7 +41,7 @@ voitureRouter.put('/update/:id',(req,res)=>{
 
 voitureRouter.delete('/delete/:id',(req,res)=>{
     const voitureId=parseInt(req.params.id);
-    const voitureById = voiture.find(voiture=>voiture.id === voitureId);
+    const voitureById = voiture.findIndex(voiture=>voiture.id === voitureId);
         if (voitureById !=null){
             voiture.splice(voitureById,1);
             res.send("DELETED !");
